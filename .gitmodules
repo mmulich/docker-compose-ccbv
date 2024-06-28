@@ -1,0 +1,4 @@
+[submodule "ccbv"]
+	path = ccbv
+	url = https://github.com/classy-python/ccbv.git
+	branch = main

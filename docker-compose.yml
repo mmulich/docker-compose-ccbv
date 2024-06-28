@@ -1,0 +1,14 @@
+services:
+  ccbv:
+    build: .
+    command: python3 manage.py runserver 0.0.0.0:8000
+    environment:
+      - "DEBUG=True"
+    ports:
+      - "8080:8000"
+    volumes:
+      - data:/app/var
+
+volumes:
+  data:
+    driver: local

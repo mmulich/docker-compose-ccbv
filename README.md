@@ -5,13 +5,18 @@ This runs [ccbv](https://github.com/classy-python/ccbv) using docker compose.
 
 ## Usage
 
-Run:
+Run the following to start the services:
 
     docker compose up -d
 
-Access http://localhost:8888 or run:
+The the following to initialize the data:
 
-    open http://localhost:8888
+    docker compose exec ccbv python3 manage.py migrate
+    docker compose exec ccbv python3 manage.py load_all_django_versions
+
+Access http://localhost:8080 or run:
+
+    open http://localhost:8080
 
 
 ## License
